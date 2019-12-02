@@ -43,7 +43,8 @@ CREATE TABLE `Candidate` (
   `candidate_name` varchar(255) NOT NULL,
   `party_name` varchar(255) NOT NULL,
   `avg_sentiment_score` int(11) NOT NULL,
-  `total_tweets` int(11) NOT NULL
+  `total_tweets` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
