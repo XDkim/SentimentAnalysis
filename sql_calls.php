@@ -12,7 +12,7 @@ if (mysqli_connect_errno()) {
 	return null;
 }
 
-//$query="SELECT * FROM Tweet";
+//$query="SELECT text, sentiment_score FROM Tweet WHERE id IN (SELECT id FROM tweets WHERE USERNAME = (SELECT username FROM Candidate where candidate_name = "Bernie Sanders"))";
 //$res=mysqli_query($db, $query);
 $stmt = $db -> prepare("SELECT * FROM Candidate where candidate_name=?"); //prepared statement
 // echo $_GET["cand"];
