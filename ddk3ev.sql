@@ -161,15 +161,15 @@ CREATE TABLE `Tweet` (
 --
 
 INSERT INTO `Tweet` (`id`, `text`, `sentiment_score`) VALUES
-('0', '\r\n"Companies shifted their resources and strategies because of Facebook\'s inflated metrics, costing them money and contributing to job losses. We need to do a lot more to hold Facebook accountable."\r\n', 0),
+('0', '\r\n"Companies shifted their resources and strategies because of Facebook\'s inflated metrics, costing them money and contributing to job losses. We need to do a lot more to hold Facebook accountable."\r\n', -.2),
 ('1', '\r\n"Thank you, @TheJeffreyMarsh . I want to make sure everyone\'s needs are reflected in my plans, and that your voices are uplifted. Thanks for being on #TeamWarren."\r\n', 1),
-('2', '\r\n"You’re making my point here. It’s up to you whether you take money to promote lies. You can be in the disinformation-for-profit business, or you can hold yourself to some standards. In fact, those standards were in your policy. Why the change?"\r\n', 0),
-('3', '\r\n"I’m about to take the stage in New Hampshire to discuss the grave threat Donald Trump poses to our democracy and the action we must take. Tune in now:"\r\n', 0),
+('2', '\r\n"You’re making my point here. It’s up to you whether you take money to promote lies. You can be in the disinformation-for-profit business, or you can hold yourself to some standards. In fact, those standards were in your policy. Why the change?"\r\n', -.4),
+('3', '\r\n"I’m about to take the stage in New Hampshire to discuss the grave threat Donald Trump poses to our democracy and the action we must take. Tune in now:"\r\n', -.1),
 ('4', '\r\n"Thank you, @UFCW ! I promise you won’t have a better ally in the White House if I’m president. I’m a union guy and always have been. Together, we can restore the soul of this nation."\r\n', 1),
-('5', '\r\n"I’m about to take the stage at the @UFCW Presidential Forum in Iowa, where I’ll discuss my plans to strengthen America’s unions. Tune in to watch live:"\r\n', 0),
+('5', '\r\n"I’m about to take the stage at the @UFCW Presidential Forum in Iowa, where I’ll discuss my plans to strengthen America’s unions. Tune in to watch live:"\r\n', .4),
 ('6', '\r\n"This phony “anti-war” president vetoed our bill to get American troops out of the illegal war in Yemen. He has ignored Congress’s power to declare war. He’s spent years intensifying Middle East conflicts without giving a damn about the Constitution. Trump is a liar and a fraud."\r\n', -1),
-('7', '\r\n"When I reflect on how this country passed Social Security in 1935 and Medicare in 1965, I think about how much poverty and suffering we ended. Our next step is Medicare for All. When we succeed, future generations will appreciate how we made health care a human right in America."\r\n', 0),
-('8', '\r\n"Some argue that the U.S. is not really engaged in hostilities in Yemen. But when Yemenis see \"Made in USA\" on the bombs killing their children, it’s very clear that the United States is part of this horrible war. This must end."\r\n', 0),
+('7', '\r\n"When I reflect on how this country passed Social Security in 1935 and Medicare in 1965, I think about how much poverty and suffering we ended. Our next step is Medicare for All. When we succeed, future generations will appreciate how we made health care a human right in America."\r\n', .3),
+('8', '\r\n"Some argue that the U.S. is not really engaged in hostilities in Yemen. But when Yemenis see \"Made in USA\" on the bombs killing their children, it’s very clear that the United States is part of this horrible war. This must end."\r\n', -.4),
 ('9', '\r\n"Great crowd in Manchester tonight!!  Some awesome #YangGang there."  \r\n', 1),
 ('10', '\r\n"Eventually people will stop underestimating us. By then we will have won." \r\n', .6),
 ('11', '\r\n"Thank you for having me Bedford Democrats! Let\'s move the country forward." \r\n', .9), 
