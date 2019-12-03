@@ -11,18 +11,13 @@
 <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 <script>
 $(document).ready(function() {
-		$( "#cand" ).change(function() {
-			var selection = $(this).children("option:selected").val();
-			console.log(selection);
 			$.ajax({
 url: 'sql_calls.php', 
-data: {candidate: selection},
+data: {candidate: "Bernie Sanders"},
 success: function(data){
 $('#results').html(data);	
-
 }
 });
-			});
 
 		});
 
@@ -31,19 +26,25 @@ $('#results').html(data);
 
 <body style="background-color:#f1f1f1">
 <br><br>
-<h1 style="font-size: 800%; color:#002868;">TWITTER</h1>
-<h1 style="font-size: 310%;">SENTIMENT ANALYSIS</h1>
-<h2 style="background-color: #bf0a30; font-size: 220%;">2020 PRESIDENTIAL ELECTION</h2>
-
+<h1 style="font-size: 267%; color:#002868;">TWITTER</h1>
+<h1 style="font-size: 103%;">SENTIMENT ANALYSIS</h1>
+<h2 style="background-color: #bf0a30; font-size: 73%;">2020 PRESIDENTIAL ELECTION</h2>
 <br>
-<p style="font-weight:bold;">Select a candidate to view Tweets.</p>
-<form action ="sql_calls.php" style="text-align: center" method="POST">
-	<select class="select-css" name="cand" id="cand">
-		<option value="Elizabeth Warren">Elizabeth Warren</option>
-		<option value="Joe Biden">Joe Biden</option>
-		<option value="Bernie Sanders">Bernie Sanders</option>
-		<option value="Andrew Yang">Andrew Yang</option>
-	</select>   
-</form>     
-<div id="results"></div>
+
+<h1 style="font-size: 400%; color:#002868"> BERNIE SANDERS </h1>
+<div style="margin: 0 auto; width:30%; margin:0 auto;">
+	<div style="width:100%">
+		<div style="width:400px; height:250px">
+			<img style="width:170px; height:200px; display:inline-block; float:left" src="./images/bernieimage.png">
+			<div style="width:200px;display:inline-block; float:right">
+				<h1 style="font-size: 150%; color:#002868"> TOTAL TWEETS </h1>
+				<h1 style="font-size: 150%; color:#002868"> AVG SENTIMENT</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div style="clear:both;">
+	<div id="results"></div>
+</div>
 </body></html>

@@ -31,11 +31,25 @@ $('#results').html(data);
 
 <body style="background-color:#f1f1f1">
 <br><br>
-<h1 style="font-size: 800%; color:#002868;">TWITTER</h1>
-<h1 style="font-size: 310%;">SENTIMENT ANALYSIS</h1>
-<h2 style="background-color: #bf0a30; font-size: 220%;">2020 PRESIDENTIAL ELECTION</h2>
-
+<h1 style="font-size: 267%; color:#002868;">TWITTER</h1>
+<h1 style="font-size: 103%;">SENTIMENT ANALYSIS</h1>
+<h2 style="background-color: #bf0a30; font-size: 73%;">2020 PRESIDENTIAL ELECTION</h2>
 <br>
+
+<div style="margin: 0 auto; width:50%">
+	<div style="width:100%">
+		<h1 style="font-size: 400%; color:#002868"> BERNIE SANDERS </h1>
+	</div>
+	<div style="width:100%">
+		<div style="width:50%">
+		<img style="width:200px; height:250px" src="./images/bernieimage.png">
+		</div>
+		<div style="width:50%">
+		</div>
+	</div>
+</div>
+
+
 <p style="font-weight:bold;">Select a candidate to view Tweets.</p>
 <form action ="sql_calls.php" style="text-align: center" method="POST">
 	<select class="select-css" name="cand" id="cand">
