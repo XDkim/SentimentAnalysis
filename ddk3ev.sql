@@ -75,7 +75,7 @@ INSERT INTO `Candidate` (`candidate_name`, `party_name`, `avg_sentiment_score`, 
 ("Andrew Yang", "Democratic", .4, 2105, "AndrewYang"), 
 ("Mark Sanford", "Republican", .5, 201, "MarkSanford"), 
 ("Donald Trump", "Republican", 0, 34920, "realDonaldTrump"), 
-("Joe Walsh", "Republican", .2, 892, "WalshFredom");
+("Joe Walsh", "Republican", .2, 892, "WalshFreedom");
 
 -- --------------------------------------------------------
 
