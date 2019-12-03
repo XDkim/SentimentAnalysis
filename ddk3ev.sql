@@ -161,40 +161,16 @@ CREATE TABLE `Tweet` (
 --
 
 INSERT INTO `Tweet` (`id`, `text`, `sentiment_score`) VALUES
-('0', '\r\n"Companies shifted their resources and strategies because of Facebook\'s inflated metrics, costing them money and contributing to job losses. We need to do a lot more to hold Facebook accountable."\r\n', 0),
-('1', '\r\n"Thank you, @TheJeffreyMarsh . I want to make sure everyone\'s needs are reflected in my plans, and that your voices are uplifted. Thanks for being on #TeamWarren."\r\n', 1),
-('2', '\r\n"You’re making my point here. It’s up to you whether you take money to promote lies. You can be in the disinformation-for-profit business, or you can hold yourself to some standards. In fact, those standards were in your policy. Why the change?"\r\n', 0),
-('3', '\r\n"I’m about to take the stage in New Hampshire to discuss the grave threat Donald Trump poses to our democracy and the action we must take. Tune in now:"\r\n', 0),
-('4', '\r\n"Thank you, @UFCW ! I promise you won’t have a better ally in the White House if I’m president. I’m a union guy and always have been. Together, we can restore the soul of this nation."\r\n', 1),
-('5', '\r\n"I’m about to take the stage at the @UFCW Presidential Forum in Iowa, where I’ll discuss my plans to strengthen America’s unions. Tune in to watch live:"\r\n', 0),
-('6', '\r\n"This phony “anti-war” president vetoed our bill to get American troops out of the illegal war in Yemen. He has ignored Congress’s power to declare war. He’s spent years intensifying Middle East conflicts without giving a damn about the Constitution. Trump is a liar and a fraud."\r\n', -1),
-('7', '\r\n"When I reflect on how this country passed Social Security in 1935 and Medicare in 1965, I think about how much poverty and suffering we ended. Our next step is Medicare for All. When we succeed, future generations will appreciate how we made health care a human right in America."\r\n', 0),
-('8', '\r\n"Some argue that the U.S. is not really engaged in hostilities in Yemen. But when Yemenis see \"Made in USA\" on the bombs killing their children, it’s very clear that the United States is part of this horrible war. This must end."\r\n', 0),
-('9', '\r\n"Great crowd in Manchester tonight!!  Some awesome #YangGang there."  \r\n', 1),
-('10', '\r\n"Eventually people will stop underestimating us. By then we will have won." \r\n', .6),
-('11', '\r\n"Thank you for having me Bedford Democrats! Let\'s move the country forward." \r\n', .9), 
-('12', '\r\n"Surprising the Pentagon, surprising allies abroad, and surprising allies in Congress is hardly consistent with a measured approach, but sadly consistent with this President." \r\n', -.2),
-('13', '\r\n"I want to focus on @realDonaldTrump\'s decision this week on the Kurds and Syria. His capricious approach and his implementation on immediate Special Forces removal, to clear the way for a Turkish military strike, is tone deaf to the message it sends to our allies." \r\n', -.6), 
-('14', '\r\n"Congratulations to the Great State of Louisiana. A big night. You will soon have a new and wonderful Governor, @EddieRispone . Your Taxes and Car Insurance Payments will go DOWN!" \r\n', .5), 
-('15', '\r\n"The Governor of Louisiana, John Bel Edwards, has done a poor job. NOW HE IS IN A RUNOFF WITH A GREAT REPUBLICAN, @EddieRispone . Thank you Louisiana! 66% down to 47% after I explained what a bad job the Governor was doing." \r\n', -.6), 
-('16', '\r\n"Start thinking about getting bigger tractors!" \r\n', 1.0), 
-('17', '\r\n"There is no defense for what Trump did. His "defense" team knows this which is why they make no effort to defend what he did" \r\n', -.8), 
-('18', '\r\n"Very well put" \r\n', .9), 
-('19', '\r\n"And still, Trumps media servants like Hannity will shout "deep state" and everybody who watches Hannity, et al. will nod approvingly at their "deep state" fake news" \r\n', -.5);
-
-
---
--- Triggers `Tweet`
---
-DELIMITER $$
-CREATE TRIGGER `boundSentimentScoreLower` BEFORE INSERT ON `Tweet` FOR EACH ROW SET NEW.sentiment_score = IF(NEW.sentiment_score < -1, -1, NEW.sentiment_score)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `boundSentimentScoreUpper` BEFORE INSERT ON `Tweet` FOR EACH ROW SET NEW.sentiment_score = IF(NEW.sentiment_score > 1, 1, NEW.sentiment_score)
-$$
-DELIMITER ;
-
+('0', '\r\n“Companies shifted their resources and strategies because of Facebook\'s inflated metrics, costing them money and contributing to job losses. We need to do a lot more to hold Facebook accountable.”\r\n', 0),
+('1', '\r\n“Thank you, @TheJeffreyMarsh . I want to make sure everyone\'s needs are reflected in my plans, and that your voices are uplifted. Thanks for being on #TeamWarren.”\r\n', 1),
+('2', '\r\n“You’re making my point here. It’s up to you whether you take money to promote lies. You can be in the disinformation-for-profit business, or you can hold yourself to some standards. In fact, those standards were in your policy. Why the change?”\r\n', 0),
+('3', '\r\nI’m about to take the stage in New Hampshire to discuss the grave threat Donald Trump poses to our democracy and the action we must take. Tune in now:\r\n', 0),
+('4', '\r\nThank you, @UFCW ! I promise you won’t have a better ally in the White House if I’m president. I’m a union guy and always have been. Together, we can restore the soul of this nation.\r\n', 1),
+('5', '\r\nI’m about to take the stage at the @UFCW Presidential Forum in Iowa, where I’ll discuss my plans to strengthen America’s unions. Tune in to watch live:\r\n', 0),
+('6', '\r\nThis phony “anti-war” president vetoed our bill to get American troops out of the illegal war in Yemen. He has ignored Congress’s power to declare war. He’s spent years intensifying Middle East conflicts without giving a damn about the Constitution. Trump is a liar and a fraud.\r\n', -1),
+('7', '\r\nWhen I reflect on how this country passed Social Security in 1935 and Medicare in 1965, I think about how much poverty and suffering we ended. Our next step is Medicare for All. When we succeed, future generations will appreciate how we made health care a human right in America.\r\n', 0),
+('8', '\r\nSome argue that the U.S. is not really engaged in hostilities in Yemen. But when Yemenis see \"Made in USA\" on the bombs killing their children, it’s very clear that the United States is part of this horrible war. This must end.\r\n', 0),
+('9', '\r\nGreat crowd in Manchester tonight!!  Some awesome #YangGang there.  \r\n', 1);
 -- --------------------------------------------------------
 
 --
