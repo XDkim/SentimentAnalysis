@@ -119,18 +119,6 @@ INSERT INTO `Tweet` (`id`, `text`, `sentiment_score`) VALUES
 ('7', '\r\nWhen I reflect on how this country passed Social Security in 1935 and Medicare in 1965, I think about how much poverty and suffering we ended. Our next step is Medicare for All. When we succeed, future generations will appreciate how we made health care a human right in America.\r\n', 0),
 ('8', '\r\nSome argue that the U.S. is not really engaged in hostilities in Yemen. But when Yemenis see \"Made in USA\" on the bombs killing their children, it’s very clear that the United States is part of this horrible war. This must end.\r\n', 0),
 ('9', '\r\nGreat crowd in Manchester tonight!!  Some awesome #YangGang there.  \r\n', 1);
---
--- Triggers `Tweet`
---
-DELIMITER $$
-CREATE TRIGGER `boundSentimentScoreLower` BEFORE INSERT ON `Tweet` FOR EACH ROW SET NEW.sentiment_score = IF(NEW.sentiment_score < -1, -1, NEW.sentiment_score)
-$$
-DELIMITER ;
-DELIMITER $$
-CREATE TRIGGER `boundSentimentScoreUpper` BEFORE INSERT ON `Tweet` FOR EACH ROW SET NEW.sentiment_score = IF(NEW.sentiment_score > 1, 1, NEW.sentiment_score)
-$$
-DELIMITER ;
-
 -- --------------------------------------------------------
 
 --
