@@ -68,7 +68,7 @@ CREATE TABLE `Candidate` (
   `username` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `candidate` (`candidate_name`, `party_name`, `avg_sentiment_score`, `total_tweets`, `username`) VALUES 
+INSERT INTO `Candidate` (`candidate_name`, `party_name`, `avg_sentiment_score`, `total_tweets`, `username`) VALUES 
 ("Bernie Sanders", "Democratic", .4, 3035, "BernieSanders"), 
 ("Joe Biden", "Democratic", .7, 492, "joebiden"), 
 ("Elizabeth Warren", "Democratic", .5, 428, "ewarren"), 
