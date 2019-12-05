@@ -24,7 +24,21 @@ $('#results').html(data);
 });
 			});
 
+//downloadInnerHtml(fileName, 'results','text/html');
+
 		});
+
+function downloadInnerHtml(filename, elId, mimeType) {
+	    var elHtml = document.getElementById(elId).innerHTML;
+	        var link = document.createElement('a');
+		    mimeType = mimeType || 'text/plain';
+
+		        link.setAttribute('download', filename);
+			    link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+			        link.click(); 
+}
+
+var fileName =  'tweets.txt'; // You can use the .txt extension if you want
 
 </script>
 </head>
@@ -49,4 +63,7 @@ $('#results').html(data);
 	</select>   
 </form>     
 <div id="results"></div>
+
+<button onclick="downloadInnerHtml(fileName, 'results','text/html');">Export Tweets</button>
+
 </body></html>
